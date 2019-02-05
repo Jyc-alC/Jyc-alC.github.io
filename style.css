@@ -1,5 +1,5 @@
 :root{
-  
+
 }
 
 body{
@@ -14,4 +14,7 @@ body{
 #secondary-header{
   text-align: center;
   font-family: 'Roboto', sans-serif, monospace;
+}
+#main-content{
+  font-family: 'Roboto', monospace;
 }
