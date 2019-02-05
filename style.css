@@ -1,9 +1,13 @@
 body{
   background-color: lightgrey;
 }
-h1{
-  font-family: Roboto, monospace;
+#main-header{
+  font-family: 'Roboto', sans-serif, monospace;
   text-align: center;
   background-color: darkgrey;
   padding: 20px 20px 20px 20px;
+}
+#secondary-header{
+  text-align: center;
+  font-family: 'Roboto', sans-serif, monospace;
 }
