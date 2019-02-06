@@ -5,16 +5,17 @@
 body{
   background-color: lightgrey;
 }
-#main-header{
+.main-header{
   font-family: 'Roboto', sans-serif, monospace;
   text-align: center;
   background-color: darkgrey;
   padding: 20px 20px 20px 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
-#secondary-header{
+.secondary-header{
   text-align: center;
   font-family: 'Roboto', sans-serif, monospace;
 }
-#main-content{
+.main-content{
   font-family: 'Roboto', monospace;
 }
