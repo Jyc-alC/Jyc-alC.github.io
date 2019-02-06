@@ -22,7 +22,7 @@ body{
 .main-content{
   font-family: 'Roboto', monospace;
 }
-.nav-bar{
+#navbar{
   font-family: 'Roboto', monospace;
   text-align: center;
   font-size: 25px;
@@ -32,6 +32,7 @@ body{
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
   background-color: lightgrey;
   text-transform: uppercase;
+  position: relative;
 }
 </style>
   <head>
@@ -41,12 +42,12 @@ body{
   <body>
     <div id="header-shadow" class="main-header">
       <h1>Welcome to my portfolio.</h1>
+      <nav id="navbar">
+        <a href="#">Projects</a>
+      </nav>
     </div>
     <div class="secondary-header">
       <h2>I'm an aspiring software developer, I have a passion for learning and love creating awesome stuff.</h2>
-    </div>
-    <div class="nav-bar">
-      <a href="#">Projects</a>
     </div>
     <div class="main-content">
       <p>Below I have my current skills listed.</p>
