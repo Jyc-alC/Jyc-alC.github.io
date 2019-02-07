@@ -18,6 +18,19 @@ body{
   background: linear-gradient(35deg, #93baf9, #f95c5c);
   border-radius: 10px;
 }
+#main-header-text{
+  animation-name: header-text-scale;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes header-text-scale {
+  50%{
+    transform: scale(1.4);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
 .secondary-header{
   text-align: center;
   font-family: 'Roboto', sans-serif, monospace;
@@ -47,6 +60,16 @@ body{
   float: left;
   border-radius: 10px;
 }
+#github-link:hover{
+  animation-name: github-scale;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+@keyframes github-scale {
+  100%{
+    transform: scale(1.2);
+  }
+}
 </style>
   <head>
     <meta charset="utf-8">
@@ -55,7 +78,7 @@ body{
   <body>
     <div id="header-shadow" class="main-header">
       <a href="https://github.com/Jyc-alC"><img id="github-link" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="My GitHub"></a>
-      <h1>Welcome to my portfolio.</h1>
+      <h1 id="main-header-text">Welcome to my portfolio.</h1>
       <nav id="navbar">
         <a class="navbar-content" href="#">Projects</a>
       </nav>
