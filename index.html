@@ -3,12 +3,6 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
 <style>
-a:hover{
-  color: #ff0000;
-}
-a{
-  color: blue;
-}
 body{
   background-color: lightgrey;
 }
@@ -43,6 +37,16 @@ body{
   text-transform: uppercase;
   position: relative;
 }
+.navbar-content{
+
+}
+#github-link{
+  height: 50px;
+  width: 50px;
+  position: relative;
+  float: left;
+  border-radius: 10px;
+}
 </style>
   <head>
     <meta charset="utf-8">
@@ -50,9 +54,10 @@ body{
   </head>
   <body>
     <div id="header-shadow" class="main-header">
+      <a href="https://github.com/Jyc-alC"><img id="github-link" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="My GitHub"></a>
       <h1>Welcome to my portfolio.</h1>
       <nav id="navbar">
-        <a href="#">Projects</a>
+        <a class="navbar-content" href="#">Projects</a>
       </nav>
     </div>
     <div class="secondary-header">
