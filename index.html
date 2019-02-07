@@ -6,17 +6,30 @@
 body{
   background-color: lightgrey;
 }
-#header-shadow{
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  font-size: 25px;
+#header-colour{
+  background: linear-gradient(35deg, #93baf9, #f95c5c);
+}
+#header-colour:hover{
+  animation-name: colour-wave;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+@keyframes colour-wave {
+  0%{
+    background: linear-gradient(35deg, #f95c5c, #F9B85C);
+  }
+  100%{
+    background: linear-gradient(35deg, #F9B85C, #78F95C);
+  }
 }
 .main-header{
   font-family: 'Roboto', sans-serif, monospace;
   text-align: center;
-  background-color: darkgrey;
   padding: 20px 20px 20px 20px;
-  background: linear-gradient(35deg, #93baf9, #f95c5c);
   border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  font-size: 25px;
 }
 #main-header-text{
   animation-name: header-text-scale;
@@ -63,11 +76,12 @@ body{
   }
 }
 #github-link{
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   position: relative;
   float: left;
   border-radius: 10px;
+  padding: 5px;
 }
 #github-link:hover{
   animation-name: github-scale;
@@ -75,6 +89,9 @@ body{
   animation-fill-mode: forwards;
 }
 @keyframes github-scale {
+  50%{
+    transform: rotate(360deg);
+  }
   100%{
     transform: scale(1.2);
     opacity: 0.6;
@@ -86,7 +103,8 @@ body{
     <title>Joshua Clacy</title>
   </head>
   <body>
-    <div id="header-shadow" class="main-header">
+    <div id="header-colour" class="main-header">
+      <a href="#"><img id="github-link" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png" alt="My Linkedin"></a>
       <a href="https://github.com/Jyc-alC"><img id="github-link" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="My GitHub"></a>
       <h1 id="main-header-text">Welcome to my portfolio.</h1>
       <nav class="navbar-content" id="navbar">
@@ -97,7 +115,7 @@ body{
       <h2>I'm an aspiring software developer, I have a passion for learning and love to create awesome stuff.</h2>
     </div>
     <div class="main-content">
-      
+
     </div>
   </body>
 </html>
