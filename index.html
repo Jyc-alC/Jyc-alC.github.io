@@ -9,13 +9,17 @@ body{
 }
 #header-colour{
   background: linear-gradient(35deg, #93baf9, #f95c5c);
+  animation-name: colour-wave;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
 }
-#header-colour:hover{
+/* #header-colour:hover{
   animation-name: colour-wave;
   animation-duration: 3s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-}
+} */
 @keyframes colour-wave {
   10%{
     background: linear-gradient(35deg, #f95c5c, #F9B85C);
@@ -33,15 +37,17 @@ body{
   font-size: 25px;
 }
 #main-header-text{
+  padding-right: 0%;
+  text-align: center;
   animation-name: header-text-scale;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
 @keyframes header-text-scale {
   50%{
     transform: scale(1.1);
-    opacity: 0.6;
+    opacity: 0.65;
   }
   100%{
     transform: scale(1);
@@ -56,27 +62,33 @@ body{
   padding: 10px;
 }
 #navbar{
-  font-family: 'Staatliches', monospace;
-  text-align: center;
-  font-size: 35px;
-  font-weight: bold;
-  padding: 1%;
+  padding: 2%;
   margin: auto;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
   background-color: lightgrey;
-  text-transform: uppercase;
   position: relative;
 }
-.navbar-content:hover{
-  animation-name: navbar-content-scale;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
+a {
+margin: 10%;
 }
-@keyframes navbar-content-scale {
-  100%{
-    transform: scale(1.05);
-  }
+
+#navbar-content{
+  font-family: 'Staatliches', monospace;
+  text-align: center;
+  font-size: 35px;
+  position: relative;
+  border-radius: 10px;
+  width: 10%;
+  padding: 0.4%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background-color: rgb(126, 233, 252);
+  margin: auto;
+  transition: 0.2s;
 }
+#navbar-content:hover{
+  transform: scale(1.2);
+}
+
 #github-link{
   height: 40px;
   width: 40px;
@@ -89,7 +101,7 @@ body{
 #github-link:hover{
   animation-name: github-scale;
   animation-duration: 500ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 @keyframes github-scale {
   50%{
@@ -100,11 +112,41 @@ body{
     opacity: 0.6;
   }
 }
+@keyframes footer-spin {
+  0% {transform: rotate(0deg);}
+  3% {transform: rotate(1deg);}
+  6% {transform: rotate(2deg);}
+  9% {transform: rotate(3deg);}
+  12% {transform: rotate(2deg);}
+  15% {transform: rotate(1deg);}
+  18% {transform: rotate(0deg);}
+  21% {transform: rotate(-1deg);}
+  24% {transform: rotate(-2deg);}
+  27% {transform: rotate(-3deg);}
+  30% {transform: rotate(-2deg);}
+  33% {transform: rotate(-1deg);}
+  36% {transform: rotate(0deg);}
+  38% {transform: rotate(1deg);}
+  40% {transform: rotate(2deg);}
+  42% {transform: rotate(3deg);}
+  44% {transform: rotate(2deg);}
+  46% {transform: rotate(1deg);}
+  48% {transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
 #footer-content{
   text-align: center;
   opacity: 0.5;
   font-size: 15px;
+  padding: 1%;
+  margin: 1%;
+  width: 10%;
+  height: 10%;
 }
+#copywrite{
+  animation: footer-spin 2000ms ease-in-out infinite;
+}
+
 </style>
   <head>
     <meta charset="utf-8">
@@ -117,9 +159,14 @@ body{
       <head>
         <h1 id="main-header-text">Welcome to my portfolio.</h1>
       </head>
-      <nav class="navbar-content" id="navbar">
-        <a href="#" id="nav-projects">Projects</a>
-      </nav>
+      <div id="navbar">
+          <div style="display: inline-block; margin-inline: 1%;" id="navbar-content">
+            <a href="#">Projects</a>
+          </div>
+          <div style="display: inline-block;" id="navbar-content">
+            <a href="#">Contact</a>
+          </div>
+      </div>
     </div>
     <div class="secondary-header">
       <h2>I'm an aspiring software developer, I have a passion for learning and love to create awesome stuff.</h2>
@@ -130,5 +177,5 @@ body{
       </main>
     </div>
   </body>
-  <footer id="footer-content">&copy; 2019 Joshua C</footer>
+  <footer id="footer-content"><div id="copywrite">&copy; 2020 Joshua C</div></footer>
 </html>
